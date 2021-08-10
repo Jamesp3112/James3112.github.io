@@ -1,0 +1,65 @@
+//Variables
+$website-width: 1280px;
+// $main-color: #ffbc00;
+$light-color: #f4f4f4;
+$main-color: #c09285;
+$stronger-main-color: #a16656;
+$dark-color: #333;
+$medium-color: #ccc;
+$light-green: #ebf3f1;
+$medium-green: #b4d9c6;
+$strong-green: #42748a;
+$light-blue: #c6def1;
+$light-brown: #f5efe1;
+$medium-brown: #b44a3d;
+$strong-brown: #722015;
+$medium-blue: #5885b5;
+$gentle-brown: #967579;
+
+$bg-img: url("../img/dsc_0581.jpg");
+
+// Set Text Color
+@function set-text-color($color) {
+  @if (lightness($color) > 50) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+
+//Shake anim
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
